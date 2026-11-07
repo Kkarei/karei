@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelvin Karei Maina — Persphere</title>
+<meta name="description" content="Kelvin Karei Maina — creative technologist, entrepreneur, and interdisciplinary thinker. Resume, portfolio, and journal.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#171717;--surface:#222222;--text:#F1EEE8;--muted:#A5A19A;--accent:#B88A54;--line:#343434;--serif:'Instrument Serif',serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+section{padding:96px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0 0 16px}
+.eyebrow{font-family:var(--mono);font-size:13px;color:var(--accent);margin:0 0 12px}
+p{color:var(--muted);margin:0 0 16px}
+a{color:var(--text);text-decoration:none}
+a:hover{color:var(--accent)}
+.btn{display:inline-block;padding:12px 24px;border:1px solid var(--line);border-radius:2px;font-family:var(--mono);font-size:13px;margin:4px 8px 4px 0}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.btn.primary:hover{opacity:.85;color:var(--bg)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 32px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:12px}
+.wordmark{font-family:var(--serif);font-size:22px;letter-spacing:.04em}
+nav .links a{margin-left:28px;font-family:var(--mono);font-size:13px}
+.hero{padding-top:120px;text-align:center}
+.portrait{display:block;width:280px;height:auto;margin:0 auto 32px;filter:drop-shadow(0 20px 44px rgba(0,0,0,.55))}
+.hero h1{font-size:56px;max-width:720px;margin:0 auto 20px}
+.hero .sub{font-family:var(--mono);font-size:14px;color:var(--muted);margin-bottom:12px}
+.hero .statement{max-width:480px;margin:0 auto 32px;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.card{display:block;background:var(--surface);border:1px solid var(--line);padding:32px}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+footer{border-top:1px solid var(--line);padding:48px 0;text-align:center}
+@media(max-width:700px){.grid3{grid-template-columns:1fr}.hero h1{font-size:36px}section{padding:64px 0}}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="wordmark">KAREI</a>
+<div class="links">
+<a href="resume.html">Resume</a><a href="portfolio.html">Portfolio</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
+</div>
+</nav>
+<section class="hero wrap">
+<img class="portrait" src="portrait.png" width="804" height="1000" alt="Kelvin Karei Maina">
+<div class="sub">Creative Technologist · Entrepreneur · Interdisciplinary Thinker</div>
+<h1>I explore ideas.<br>I build things.</h1>
+<p class="statement">Building at the intersection of technology, creativity, and human experience.</p>
+<a class="btn primary" href="portfolio.html">Explore My Work</a>
+<a class="btn" href="journal.html">Read My Journal</a>
+<a class="btn" href="resume.html">View My Resume</a>
+</section>
+<section class="wrap">
+<p class="eyebrow">Who I Am</p>
+<p>I am interested in how ideas connect, how things work, and how creativity and technology can be used to solve practical problems. My journey spans technology, design, business, and human experience — exploring different disciplines, learning continuously, and turning ideas into something useful.</p>
+</section>
+<section class="wrap">
+<div class="grid3">
+<a class="card" href="resume.html"><h3>Resume</h3><p class="eyebrow">Who I Am</p><p>My professional journey, experience, competencies, and the things that have shaped my work.</p></a>
+<a class="card" href="portfolio.html"><h3>Portfolio</h3><p class="eyebrow">What I Create</p><p>Digital products, projects, and creative work that reflect my approach to problem-solving.</p></a>
+<a class="card" href="journal.html"><h3>Journal</h3><p class="eyebrow">What I Explore</p><p>Thoughts, discoveries, and deeper explorations of ideas across different areas of interest.</p></a>
+</div>
+</section>
+<section class="wrap">
+<h2>Selected Work</h2>
+<div class="work-grid">
+<div class="card"><h3>ON369</h3><p>A browser-based personal webtop — a full desktop shell with a window manager, five built-in themes, and a 250+ test suite. Pencraft and Beartly are on its roadmap as apps that plug in natively.</p><a href="https://on369.top">on369.top</a></div>
+<div class="card"><h3>Pencraft Notes</h3><p>An offline-first notes and productivity PWA — rich-text notes, a vault, to-dos, achievement tracking, and an expense tracker, with a local safe-storage layer guarding against data loss.</p><a href="https://pencraft.on369.top">pencraft.on369.top</a></div>
+<div class="card"><h3>Beartly</h3><p>A single-file, Figma-style UI builder with no build step — 37+ components, five starter templates, and immediate code export.</p><a href="https://beartly.on369.top">beartly.on369.top</a></div>
+</div>
+</section>
+<section class="wrap">
+<h2>From the Journal</h2>
+<p>The Journal is still being built — short thoughts, long-form articles, and the occasional photo, arriving soon. <a href="journal.html">Visit the Journal</a></p>
+</section>
+<section class="wrap" id="contact">
+<h2>Let's Connect</h2>
+<p>Have an idea, a project, or something worth discussing? I'd be glad to connect.</p>
+<a class="btn primary" href="mailto:karei@on369.top">karei@on369.top</a>
+<a class="btn" href="https://linkedin.com/in/kelvin-karei">LinkedIn</a>
+<a class="btn" href="https://github.com/Kkarei">GitHub</a>
+<a class="btn" href="https://behance.net/kelvinkarei">Behance</a>
+<a class="btn" href="https://beartbranding.on369.top">Beart Solutions</a>
+</section>
+<footer>
+<div class="wordmark">KAREI</div>
+<p style="margin-top:8px">Creative Technologist · Entrepreneur · Interdisciplinary Thinker</p>
+<p style="margin-top:24px;font-family:var(--mono);font-size:11px">© 2026 Kelvin Karei Maina · A Persphere</p>
+</footer>
+</body>
+</html>
