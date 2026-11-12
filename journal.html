@@ -7,6 +7,7 @@
 <meta name="description" content="The journal of Kelvin Karei Maina — short thoughts, long-form articles, and media posts on technology, design, and building things.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
+@view-transition{navigation:auto}
 :root{--bg:#171717;--surface:#222222;--text:#F1EEE8;--muted:#A5A19A;--accent:#B88A54;--line:#343434;--serif:'Instrument Serif',serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
@@ -15,22 +16,30 @@ section{padding:56px 0}
 h1,h3{font-family:var(--serif);font-weight:400;margin:0 0 16px}
 .eyebrow{font-family:var(--mono);font-size:13px;color:var(--accent);margin:0 0 12px}
 p{color:var(--muted);margin:0 0 16px}
-a{color:var(--text);text-decoration:none}
+a{color:var(--text);text-decoration:none;transition:color .2s ease}
 a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 nav{display:flex;justify-content:space-between;align-items:center;padding:24px 32px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:12px}
 .wordmark{font-family:var(--serif);font-size:22px;letter-spacing:.04em}
 nav .links a{margin-left:28px;font-family:var(--mono);font-size:13px}
 .intro{padding:80px 0 48px;border-bottom:1px solid var(--line)}
 .intro h1{font-size:44px}
 .note{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:32px}
-.entry{margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.entry{margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--line);transition:transform .25s ease}
 .entry.thought{font-family:var(--serif);font-size:19px;font-style:italic}
 .entry.thought .date{display:block;font-family:var(--mono);font-style:normal;font-size:11px;color:var(--muted);margin-bottom:8px}
-.entry.article{background:var(--surface);border:1px solid var(--line);padding:28px}
+.entry.article{background:var(--surface);border:1px solid var(--line);padding:28px;transition:transform .25s ease,border-color .25s ease}
+.entry.article:hover{transform:translateY(-3px);border-color:var(--accent)}
 .entry .tag{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);margin-bottom:10px}
-.media-ph{width:100%;max-width:280px;aspect-ratio:4/3;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:14px}
+.media-ph{width:100%;max-width:280px;aspect-ratio:4/3;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:14px;transition:border-color .25s ease}
+.entry:hover .media-ph{border-color:var(--accent)}
 footer{border-top:1px solid var(--line);padding:48px 0;text-align:center}
 @media(max-width:700px){.intro h1{font-size:32px}}
+@media (prefers-reduced-motion: no-preference){
+html{scroll-behavior:smooth}
+.intro h1{animation:rise .7s ease both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>

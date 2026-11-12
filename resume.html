@@ -7,6 +7,7 @@
 <meta name="description" content="Resume of Kelvin Karei Maina — creative technologist and entrepreneur, founder of Beart Solutions. Experience, education, and competencies.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
+@view-transition{navigation:auto}
 :root{--bg:#171717;--surface:#222222;--text:#F1EEE8;--muted:#A5A19A;--accent:#B88A54;--line:#343434;--serif:'Instrument Serif',serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
@@ -15,8 +16,9 @@ section{padding:56px 0}
 h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0 0 16px}
 .eyebrow{font-family:var(--mono);font-size:13px;color:var(--accent);margin:0 0 12px}
 p{color:var(--muted);margin:0 0 16px}
-a{color:var(--text);text-decoration:none}
+a{color:var(--text);text-decoration:none;transition:color .2s ease}
 a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 nav{display:flex;justify-content:space-between;align-items:center;padding:24px 32px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:12px}
 .wordmark{font-family:var(--serif);font-size:22px;letter-spacing:.04em}
 nav .links a{margin-left:28px;font-family:var(--mono);font-size:13px}
@@ -25,7 +27,8 @@ nav .links a{margin-left:28px;font-family:var(--mono);font-size:13px}
 .meta{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .meta a{color:var(--muted)}
 .meta a:hover{color:var(--accent)}
-.exp{border-left:1px solid var(--line);padding-left:24px;margin-bottom:40px}
+.exp{border-left:1px solid var(--line);padding-left:24px;margin-bottom:40px;transition:border-color .25s ease}
+.exp:hover{border-color:var(--accent)}
 .exp h3{margin-bottom:2px;font-size:22px}
 .exp .role{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:12px}
 ul{margin:0;padding-left:18px;color:var(--muted)}
@@ -33,9 +36,16 @@ li{margin-bottom:6px}
 .skill-group{margin-bottom:28px}
 .skill-group h3{font-family:var(--mono);font-size:13px;color:var(--text);margin-bottom:12px;font-weight:500}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:6px 12px;color:var(--muted)}
+.tag{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:6px 12px;color:var(--muted);transition:border-color .2s ease,color .2s ease,opacity .2s ease}
+.tags:hover .tag{opacity:.5}
+.tags .tag:hover{opacity:1;color:var(--text);border-color:var(--accent)}
 footer{border-top:1px solid var(--line);padding:48px 0;text-align:center}
 @media(max-width:700px){.header h1{font-size:32px}section{padding:40px 0}}
+@media (prefers-reduced-motion: no-preference){
+html{scroll-behavior:smooth}
+.header h1{animation:rise .7s ease both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
